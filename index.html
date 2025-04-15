@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パスワード認証</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>パスワードを入力してください</h2>
+        <input type="password" id="password" placeholder="パスワード" onkeypress="if(event.key === 'Enter') checkPassword()">
+        <button onclick="checkPassword()">送信</button>
+        <p id="error" class="error"></p>
+    </div>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
