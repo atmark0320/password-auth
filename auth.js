@@ -17,7 +17,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // リダイレクト先
-const successUrl = 'https://atmark0320.github.io/E.V.C.type-p/';
+const successUrl = 'https://atmark0320.github.io/E.V.C.type-p/main.html';
 const failUrl = 'https://www.google.com';
 
 // checkPassword をグローバル公開
