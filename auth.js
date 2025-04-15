@@ -16,14 +16,16 @@ import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/fir
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// checkPassword をグローバルに公開
+// リダイレクト先
+const successUrl = 'https://atmark0320.github.io/E.V.C.type-p/';
+const failUrl = 'https://www.google.com';
+
+// checkPassword をグローバル公開
 window.checkPassword = function() {
     const password = document.getElementById('password').value;
     const error = document.getElementById('error');
-    const successUrl = 'https://atmark0320.github.io/E.V.C.type-p/';
-    const failUrl = 'https://www.google.com';
 
-    // 試行回数管理（localStorageで簡易実装）
+    // 試行回数
     let attempts = parseInt(localStorage.getItem('attempts')) || 0;
 
     // Firebase 認証
@@ -31,7 +33,8 @@ window.checkPassword = function() {
 
     signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-            localStorage.setItem('attempts', 0); // 成功でリセット
+            localStorage.setItem('attempts', 0); // 試行リセット
+            localStorage.setItem('authToken', 'allowed'); // トークン設定
             window.location.href = successUrl; // 成功
         })
         .catch(() => {
