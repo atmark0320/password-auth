@@ -16,7 +16,8 @@ import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/fir
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-function checkPassword() {
+// checkPassword をグローバルに公開
+window.checkPassword = function() {
     const password = document.getElementById('password').value;
     const error = document.getElementById('error');
     const successUrl = 'https://atmark0320.github.io/E.V.C.type-p/';
@@ -44,4 +45,4 @@ function checkPassword() {
                 document.getElementById('password').value = ''; // クリア
             }
         });
-}
+};
