@@ -7,29 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBQNxE7HXqo3UwITODUIV6Nk3nHTRDWNFE",
-    authDomain: "password-auth-40539.firebaseapp.com",
-    projectId: "password-auth-40539",
-    storageBucket: "password-auth-40539.firebasestorage.app",
-    messagingSenderId: "389413675971",
-    appId: "1:389413675971:web:7bce0ed3c35eaac1de5376",
-    measurementId: "G-2KVXVNYHGX"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
     <div class="container">
         <h2>パスワードを入力してください</h2>
         <input type="password" id="password" placeholder="パスワード" onkeypress="if(event.key === 'Enter') checkPassword()">
