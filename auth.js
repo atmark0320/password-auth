@@ -16,7 +16,7 @@ const auth = firebase.auth();
 function checkPassword() {
     const password = document.getElementById('password').value;
     const error = document.getElementById('error');
-    const successUrl = 'https://example.com';
+    const successUrl = 'https://atmark0320.github.io/E.V.C.type-p/main.html';
     const failUrl = 'https://www.google.com';
 
     // 試行回数管理（localStorageで簡易実装）
